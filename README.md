@@ -13,7 +13,15 @@ since the previous list and commits one CSV per run to [`data/`](data/), e.g.
 
 Read the latest list below.
 
-_No list has been generated yet._
+## Latest list — 2026-10-04 06:19 UTC
+
+New providers published between 2026-10-04 05:20 UTC and 2026-10-04 06:19 UTC.
+
+[Full CSV](data/new-terraform-providers-2026-10-04T06-19-24-059745Z.csv)
+
+| Published (UTC) | Provider | Namespace | Version | Description |
+| :-------------- | :------- | :-------- | :------ | :---------- |
+| 2026-10-04 05:41:08 | [trogonstack/anthropic](https://registry.terraform.io/providers/trogonstack/anthropic) | trogonstack | 0.2.0 |  |
 
 ## Data source
 
