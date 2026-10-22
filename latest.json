@@ -1,6 +1,6 @@
 {
   "baseline": {
-    "count": 4688,
+    "count": 4690,
     "path": "data/terraform-providers-baseline.txt.lzma"
   },
   "list": {
@@ -10,5 +10,5 @@
     "to": "2026-10-20T16:22:19.21253Z"
   },
   "source_truncated": false,
-  "window": "2026-10-22T14:21:36.577812Z"
+  "window": "2026-10-22T15:22:05.614996Z"
 }
