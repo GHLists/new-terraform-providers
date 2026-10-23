@@ -13,15 +13,15 @@ since the previous list and commits one CSV per run to [`data/`](data/), e.g.
 
 Read the latest list below.
 
-## Latest list — 2026-10-20 16:22 UTC
+## Latest list — 2026-10-23 10:22 UTC
 
-New providers published between 2026-10-20 15:21 UTC and 2026-10-20 16:22 UTC.
+New providers published between 2026-10-23 09:22 UTC and 2026-10-23 10:22 UTC.
 
-[Full CSV](data/new-terraform-providers-2026-10-20T16-22-19-21253Z.csv)
+[Full CSV](data/new-terraform-providers-2026-10-23T10-22-33-440654Z.csv)
 
 | Published (UTC) | Provider | Namespace | Version | Description |
 | :-------------- | :------- | :-------- | :------ | :---------- |
-| 2026-10-20 15:46:34 | [lannuttia/quay](https://registry.terraform.io/providers/lannuttia/quay) | lannuttia | 0.5.10 |  |
+| 2026-10-23 10:05:36 | [manifold-security/manifold](https://registry.terraform.io/providers/manifold-security/manifold) | manifold-security | 0.1.0 |  |
 
 ## Data source
 
