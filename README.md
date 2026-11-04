@@ -13,15 +13,15 @@ since the previous list and commits one CSV per run to [`data/`](data/), e.g.
 
 Read the latest list below.
 
-## Latest list — 2026-11-03 14:21 UTC
+## Latest list — 2026-11-04 12:21 UTC
 
-New providers published between 2026-11-03 13:21 UTC and 2026-11-03 14:21 UTC.
+New providers published between 2026-11-04 10:21 UTC and 2026-11-04 12:21 UTC.
 
-[Full CSV](data/new-terraform-providers-2026-11-03T14-21-59-485591Z.csv)
+[Full CSV](data/new-terraform-providers-2026-11-04T12-21-45-952976Z.csv)
 
 | Published (UTC) | Provider | Namespace | Version | Description |
 | :-------------- | :------- | :-------- | :------ | :---------- |
-| 2026-11-03 13:53:35 | [sntns/swarm](https://registry.terraform.io/providers/sntns/swarm) | sntns | 1.0.0 |  |
+| 2026-11-04 12:01:15 | [vulnetix/resolve](https://registry.terraform.io/providers/vulnetix/resolve) | vulnetix | 1.3.4 |  |
 
 ## Data source
 
