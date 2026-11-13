@@ -1,14 +1,14 @@
 {
   "baseline": {
-    "count": 4804,
+    "count": 4805,
     "path": "data/terraform-providers-baseline.txt.lzma"
   },
   "list": {
     "count": 1,
-    "from": "2026-11-04T13:21:40.61862Z",
-    "path": "data/new-terraform-providers-2026-11-04T14-18-40-704562Z.csv",
-    "to": "2026-11-04T14:18:40.704562Z"
+    "from": "2026-11-13T14:22:06Z",
+    "path": "data/new-terraform-providers-2026-11-13T15-22-06Z.csv",
+    "to": "2026-11-13T15:22:06Z"
   },
   "source_truncated": false,
-  "window": "2026-11-13T14:22:06Z"
+  "window": "2026-11-13T15:22:06Z"
 }
