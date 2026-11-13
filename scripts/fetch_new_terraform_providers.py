@@ -49,6 +49,9 @@ CSV_HEADER = (
     "description",
 )
 BASELINE_SUFFIX = ".txt.lzma"
+# The registry reports Go's zero time (0001-01-01T00:00:00Z) for providers
+# without a publication date; no real provider predates the registry.
+EPOCH = dt.datetime(1970, 1, 1, tzinfo=dt.timezone.utc)
 
 TRANSIENT_ERRORS = (
     urllib.error.URLError,
@@ -65,10 +68,16 @@ class NotFound(Exception):
 
 def iso(moment):
     moment = moment.astimezone(dt.timezone.utc)
+    # Format the year explicitly: strftime("%Y") is not zero-padded on every
+    # platform, which turns year 1 into "1-01-01T..." and breaks re-parsing.
+    stamp = (
+        f"{moment.year:04d}-{moment.month:02d}-{moment.day:02d}"
+        f"T{moment.hour:02d}:{moment.minute:02d}:{moment.second:02d}"
+    )
     if moment.microsecond:
         fraction = f"{moment.microsecond:06d}".rstrip("0")
-        return moment.strftime("%Y-%m-%dT%H:%M:%S") + f".{fraction}Z"
-    return moment.strftime("%Y-%m-%dT%H:%M:%SZ")
+        return f"{stamp}.{fraction}Z"
+    return f"{stamp}Z"
 
 
 def parse_timestamp(value):
@@ -83,7 +92,10 @@ def parse_timestamp(value):
 
 def timestamp_filename(moment):
     moment = moment.astimezone(dt.timezone.utc)
-    stamp = moment.strftime("%Y-%m-%dT%H-%M-%S")
+    stamp = (
+        f"{moment.year:04d}-{moment.month:02d}-{moment.day:02d}"
+        f"T{moment.hour:02d}-{moment.minute:02d}-{moment.second:02d}"
+    )
     if moment.microsecond:
         stamp += "-" + f"{moment.microsecond:06d}".rstrip("0")
     return stamp + "Z"
@@ -155,8 +167,11 @@ def fetch_provider_detail(key, user_agent, retries):
 
 def build_row(key, detail):
     namespace, _, name = key.partition("/")
+    created = parse_timestamp(detail["published_at"])
+    if created < EPOCH:
+        raise ValueError(f"implausible published_at {detail['published_at']!r}")
     return {
-        "created_at": iso(parse_timestamp(detail["published_at"])),
+        "created_at": iso(created),
         "provider": key,
         "namespace": namespace,
         "version": clean_text(detail.get("version"), 20),
@@ -353,7 +368,7 @@ def main(argv=None):
         rows.append(row)
         time.sleep(args.api_delay)
     if skipped:
-        print(f"skipped {skipped} providers without registry details", file=sys.stderr)
+        print(f"skipped {skipped} providers without usable registry details", file=sys.stderr)
     rows.sort(key=lambda row: row["created_at"])
 
     save_baseline(output, providers)
