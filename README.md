@@ -13,15 +13,15 @@ since the previous list and commits one CSV per run to [`data/`](data/), e.g.
 
 Read the latest list below.
 
-## Latest list — 2026-11-13 15:22 UTC
+## Latest list — 2026-11-17 10:21 UTC
 
-New providers published between 2026-11-13 14:22 UTC and 2026-11-13 15:22 UTC.
+New providers published between 2026-11-17 09:19 UTC and 2026-11-17 10:21 UTC.
 
-[Full CSV](data/new-terraform-providers-2026-11-13T15-22-06Z.csv)
+[Full CSV](data/new-terraform-providers-2026-11-17T10-21-09-354797Z.csv)
 
 | Published (UTC) | Provider | Namespace | Version | Description |
 | :-------------- | :------- | :-------- | :------ | :---------- |
-| 2026-11-13 14:40:13 | [glueops/proxmox](https://registry.terraform.io/providers/glueops/proxmox) | glueops | 0.1.0 |  |
+| 2026-11-17 09:28:21 | [vibraniumlabs/vibeoncall](https://registry.terraform.io/providers/vibraniumlabs/vibeoncall) | vibraniumlabs | 0.1.0 |  |
 
 ## Data source
 
