@@ -13,15 +13,15 @@ since the previous list and commits one CSV per run to [`data/`](data/), e.g.
 
 Read the latest list below.
 
-## Latest list — 2026-11-17 13:18 UTC
+## Latest list — 2026-11-20 10:21 UTC
 
-New providers published between 2026-11-17 12:21 UTC and 2026-11-17 13:18 UTC.
+New providers published between 2026-11-20 09:20 UTC and 2026-11-20 10:21 UTC.
 
-[Full CSV](data/new-terraform-providers-2026-11-17T13-18-37-972283Z.csv)
+[Full CSV](data/new-terraform-providers-2026-11-20T10-21-05-671963Z.csv)
 
 | Published (UTC) | Provider | Namespace | Version | Description |
 | :-------------- | :------- | :-------- | :------ | :---------- |
-| 2026-11-17 12:44:00 | [danielchernov7/nocthost](https://registry.terraform.io/providers/danielchernov7/nocthost) | danielchernov7 | 0.1.0 |  |
+| 2026-11-20 09:26:46 | [shieldome/shieldome](https://registry.terraform.io/providers/shieldome/shieldome) | shieldome | 0.1.0 |  |
 
 ## Data source
 
